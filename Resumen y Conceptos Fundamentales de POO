@@ -1,0 +1,123 @@
+Resumen y Conceptos Fundamentales de POO
+
+La Programación Orientada a Objetos (POO) es un paradigma de programación que utiliza "objetos" 
+como bloques de construcción fundamentales, los cuales combinan datos (atributos) y comportamientos (métodos).
+
+1. ¿Qué es POO?
+La POO modela el mundo real en un sistema computacional.
+Organiza el código alrededor de entidades llamadas objetos en lugar de funciones o lógica.
+Esto facilita la creación de software modular, flexible y fácil de mantener.
+
+Ejemplo: En lugar de tener funciones separadas para acelerar_coche() y obtener_color_coche(), 
+tienes un objeto Coche que encapsula todos estos datos y métodos.
+
+2. Objetos y Clases
+Clase: Es un plano o plantilla que define las características comunes (atributos)
+y comportamientos (métodos) de un conjunto de objetos.
+Objeto: Es una instancia concreta de una clase.
+
+Ejemplo: La clase es el plano de una Casa. Cada Casa física construida a partir de ese plano es un objeto único,
+con su propio color de pintura y dirección, pero todas siguen la misma estructura base.
+
+3. Tipos de Dato Primitivo y Clases contenedora
+
+Tipos de Dato Primitivo: Tipos de datos básicos, como int (enteros),
+float o double (decimales), boolean (verdadero/falso), char (carácter).
+Clases Contenedoras (Wrappers): Clases que "envuelven" a los tipos primitivos para permitirles 
+comportarse como objetos completos (ej. Integer, Double, Boolean).
+
+Ejemplo: int edad = 25; es un primitivo. Integer edadObjeto = 25; es un objeto, lo que permite usar métodos y funcionalidades avanzadas.
+
+4. Abstracción
+La abstracción es el proceso de simplificar sistemas complejos mostrando solo
+las características esenciales y ocultando los detalles irrelevantes.
+
+Ejemplo: Al conducir un coche, interactúas con el volante y los pedales, 
+sin necesidad de saber exactamente cómo funciona internamente el motor. El objeto Coche te "abstrae" de la complejidad mecánica.
+
+5. Encapsulamiento
+El encapsulamiento es la práctica de agrupar los datos (atributos) y los métodos que operan sobre esos datos
+en una sola unidad (la clase), y controlar el acceso a ellos. Ayuda a proteger la integridad de los datos internos del objeto.
+
+Ejemplo: En un objeto CuentaBancaria, la variable del saldo es privada (encapsulada).
+Solo se puede modificar mediante métodos públicos como depositar() o retirar(), 
+que pueden incluir validaciones (ej. verificar saldo suficiente).
+
+6. Modificadores de acceso
+Son palabras clave que controlan la visibilidad de clases, atributos y métodos, soportando el encapsulamiento:
+public: Accesible desde cualquier parte del programa.
+private: Accesible solo dentro de la misma clase.
+protected: Accesible dentro de la clase, sus subclases y, a veces, dentro del mismo paquete.
+
+7. Constructores
+Es un método especial dentro de una clase que se ejecuta automáticamente cuando se crea una nueva instancia (un nuevo objeto)
+de esa clase. Su propósito principal es inicializar los atributos del nuevo objeto.
+
+Ejemplo: Al crear un nuevo objeto Perro con new Perro("Buddy", 3), el constructor se encarga de asignar "Buddy" al nombre y 3 a la edad del nuevo perro.
+
+8. Listas
+Las listas (o ArrayList, Vector, etc., dependiendo del lenguaje) son estructuras de datos dinámicas que permiten almacenar y
+gestionar colecciones ordenadas de objetos. A diferencia de los arrays tradicionales, pueden cambiar de tamaño.
+
+Ejemplo: Una lista de compras (List<String> compras) a la que puedes añadir o quitar artículos (compras.add("Leche")) fácilmente.
+
+9. Excepciones
+Las excepciones son eventos que ocurren durante la ejecución de un programa y que interrumpen el flujo normal de las instrucciones. 
+La POO proporciona mecanismos (try-catch-finally) para manejar estos errores de manera controlada.
+
+Ejemplo: Intentar dividir por cero (10 / 0) o abrir un archivo que no existe generaría una excepción. 
+El manejo de excepciones evita que el programa se bloquee por completo.
+
+10. Interfaces
+Una interfaz es un contrato o plantilla que define un conjunto de métodos que una clase debe implementar.
+Define "qué" debe hacer una clase, pero no "cómo" lo hace.
+
+Ejemplo: Una interfaz Volador podría declarar el método volar(). Las clases Avion, Pajaro y 
+Superman implementarían esta interfaz, cada una con su propia lógica para volar().
+
+11. Sobre escritura de Métodos (Overriding)
+La sobre escritura permite a una subclase (clase hija) proporcionar una implementación específica
+para un método que ya está definido en su superclase (clase padre).
+
+Ejemplo: La clase base Animal tiene un método hacerSonido(). 
+La subclase Perro sobreescribe este método para que imprima "Guau guau",
+mientras que Gato lo sobrescribe para imprimir "Miau".
+
+12. HashMap
+Un HashMap (o diccionario, mapa) es una estructura de datos que almacena información en pares clave-valor. 
+Permite recuperar un valor muy rápidamente utilizando su clave única.
+
+Ejemplo: Almacenar datos de usuarios usando su ID único como clave: usuarios.put(123, "Carlos"),
+y luego recuperar el nombre rápidamente con usuarios.get(123).
+
+13. Polimorfismo
+El polimorfismo significa "muchas formas". Es la capacidad de un objeto de tomar muchas formas.
+En POO, se refiere a la capacidad de una referencia de clase base para referirse a un objeto de cualquiera de sus clases derivadas (subclases).
+
+Ejemplo: Puedes tener una lista de Animales, pero cada elemento de la lista podría ser internamente un Perro,
+un Gato o una Vaca. Al llamar al método hacerSonido() en cada uno, se ejecuta el método específico de cada subclase.
+
+14. Herencia
+La herencia es un mecanismo que permite a una nueva clase (subclase o clase hija) adquirir los atributos y 
+métodos de una clase existente (superclase o clase padre). Promueve la reutilización de código.
+
+Ejemplo: La clase Coche hereda de la clase Vehiculo. 
+Coche obtiene automáticamente propiedades como velocidad_maxima y métodos como arrancar(),
+y añade características propias como numero_puertas.
+
+15. Clases Abstractas
+Una clase abstracta es una clase que no puede ser instanciada (no se pueden crear objetos directamente de ella), 
+pero puede ser heredada por otras clases. Se utilizan para definir una interfaz común y proporcionar implementaciones parciales.
+
+Ejemplo: Una clase FiguraGeometrica puede ser abstracta. No existe una "figura genérica" en la vida real, 
+pero puedes heredar de ella para crear Circulo o Rectangulo, que sí son concretos.
+
+16. Miembros Estáticos y Constantes
+Miembros Estáticos (Static): Atributos o métodos que pertenecen a la clase en sí misma, 
+no a una instancia (objeto) específica. Se comparten entre todos los objetos de esa clase.
+Constantes (Final): Variables cuyo valor no puede cambiar una vez asignado.
+
+Ejemplo: En una clase Matematica, el valor de Pi (Math.PI) es una constante estática;
+no cambia y se accede directamente a través de la clase (Matematica.PI). 
+Un contador de objetos creados podría ser un atributo estático que se incrementa cada vez que se llama al constructor.
+
