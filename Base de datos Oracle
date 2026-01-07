@@ -1,0 +1,96 @@
+¿Qué es un Gestor de BD?
+Un Sistema Gestor de Bases de Datos (SGBD o DBMS) es un software que permite crear, administrar y
+utilizar bases de datos de manera eficiente. Actúa como una interfaz entre la base de datos, 
+los usuarios y las aplicaciones, gestionando el almacenamiento y la recuperación de la información.
+
+Ejemplo: Oracle Database, MySQL, PostgreSQL, Microsoft SQL Server.
+
+¿Qué es una BD? Y Tipos de Bases de datos
+
+Una Base de Datos (BD) es un conjunto organizado de datos estructurados que se almacenan y gestionan electrónicamente.
+Existen dos tipos principales:
+Relacionales: Organizan los datos en tablas con filas y columnas, y usan SQL para consultas. Son ideales para sistemas financieros o de inventario.
+Ejemplos: Oracle, MySQL, PostgreSQL.
+No Relacionales (NoSQL): Ofrecen flexibilidad para manejar datos no estructurados o semiestructurados (clave-valor, documentos, grafos)
+y escalan mejor para grandes volúmenes de datos (Big Data).
+
+Ejemplos: MongoDB, Cassandra, Neo4j.
+
+Diagrama Entidad-Relación (ERD)
+Es una herramienta visual que ilustra cómo se relacionan las diferentes entidades (tablas) dentro de un sistema. 
+Es crucial para el diseño conceptual de la base de datos antes de pasar al modelo lógico.
+Ejemplo: Un diagrama muestra una entidad CLIENTE relacionada con una entidad PEDIDO, 
+indicando que un cliente puede realizar muchos pedidos (relación uno a muchos).
+
+Modelo Lógico (Tablas, Campos y Cardinalidad)
+El Modelo Lógico traduce el diseño conceptual a una estructura que puede ser implementada en un SGBD relacional.
+
+Tablas: Conjuntos estructurados de datos organizados en filas (registros) y columnas (campos).
+
+Campos: Las columnas de una tabla que definen el tipo de dato que se almacena (ej. nombre es texto, edad es número).
+
+Cardinalidad: Describe la relación entre las tablas, como uno a uno, uno a muchos o muchos a muchos.
+
+Normalización: 1FN, 2FN Y 3 FN
+La normalización es un proceso que sigue reglas (Formas Normales) para organizar las relaciones y evitar la redundancia de datos y problemas de integridad.
+1FN (Primera Forma Normal): Asegura que cada celda de la tabla contenga solo un valor atómico y no tenga grupos repetidos.
+2FN (Segunda Forma Normal): Si está en 1FN y todos los atributos no clave dependen completamente de la clave primaria.
+3FN (Tercera Forma Normal): Si está en 2FN y no tiene dependencias transitivas (ningún campo depende de otro campo no clave).
+
+¿Cuáles son las sentencias DDL y DML?
+SQL se divide en sublenguajes:
+DDL (Data Definition Language): Se usa para definir o modificar la estructura de la base de datos y sus objetos.
+
+Ejemplos: CREATE TABLE, ALTER TABLE, DROP TABLE.
+
+DML (Data Manipulation Language): Se usa para manipular los datos dentro de las tablas.
+
+Ejemplos: SELECT, INSERT, UPDATE, DELETE.
+
+Funciones de agregación (max, min, count, avg, sum)
+Estas funciones realizan cálculos sobre un conjunto de valores y devuelven un único resultado resumido.
+
+Ejemplo: SELECT AVG(salario) FROM empleados; calcula el salario promedio de toda la tabla de empleados.
+
+Funciones y cláusulas (groupby, orderby, like, between)
+GROUP BY: Agrupa filas que tienen los mismos valores en columnas especificadas, usualmente usado con funciones de agregación.
+ORDER BY: Ordena el conjunto de resultados en orden ascendente o descendente.
+LIKE: Se usa en la cláusula WHERE para buscar un patrón específico en una columna.
+BETWEEN: Selecciona valores dentro de un rango dado.
+
+JOINS
+Los JOIN se usan para combinar filas de dos o más tablas, basándose en una columna común.
+INNER JOIN: Devuelve solo las filas que coinciden en ambas tablas.
+LEFT JOIN (u OUTER LEFT JOIN): Devuelve todos los registros de la tabla izquierda y los registros coincidentes de la tabla derecha.
+RIGHT JOIN (u OUTER RIGHT JOIN): Devuelve todos los registros de la tabla derecha y los registros coincidentes de la tabla izquierda.
+
+Trigger y Secuencia
+Trigger (Disparador): Es un bloque de código PL/SQL que se ejecuta automáticamente (se "dispara") en respuesta a eventos DML (INSERT, UPDATE, DELETE) sobre una tabla.
+Uso: Auditorías, validaciones complejas o mantener la integridad referencial.
+
+Secuencia: Un objeto de base de datos utilizado para generar automáticamente valores numéricos únicos (como IDs incrementales) cada vez que se solicita.
+
+Procedimientos Almacenados (Stored Procedures)
+Un procedimiento almacenado es un conjunto de sentencias SQL y lógica de control que se compila y almacena en la base de datos. Se ejecutan bajo demanda y agilizan tareas repetitivas, reduciendo el tráfico de red.
+Uso: Centralizar la lógica de negocio, como insertar nuevos pedidos complejos.
+
+Views
+Una vista es una tabla virtual basada en el resultado de una consulta SQL. No almacena datos físicamente,
+sino que los genera dinámicamente cuando se consulta.
+Uso: Simplificar consultas complejas, ocultar datos sensibles o restringir el acceso a ciertas columnas.
+
+Funciones
+Similar a los procedimientos almacenados, pero la principal diferencia en Oracle/SQL es que una función debe
+devolver un valor (puede ser usada dentro de una sentencia SELECT), mientras que un procedimiento almacenado no siempre lo hace.
+
+Control de versiones GIT
+GIT es un sistema de control de versiones distribuido que rastrea, registra y administra los cambios 
+realizados en un conjunto de archivos a lo largo del tiempo.
+Uso en BD: Aunque está pensado para código, se usa para versionar scripts SQL, esquemas de bases de datos o configuraciones.
+
+Metodología SCRUM
+SCRUM es un marco de trabajo ágil e iterativo para gestionar proyectos complejos, basado en ciclos cortos y fijos llamados Sprints (1-4 semanas).
+Uso en BD: Organizar el desarrollo de bases de datos en iteraciones, con roles (Product Owner, Scrum Master, Equipo de Desarrollo) y
+eventos (planificación del sprint, daily meeting, revisión, retrospectiva).
+
+
